@@ -79,6 +79,7 @@ public class Prerequisite {
      */
     public boolean isSatisfiedBy(Student student) {
         //TODO: update method to account for student's currently taking the course
+        //TODO: add tests for the changes
         for (Course course: requiredCourses.keySet()) {
             var minimumGrade = requiredCourses.get(course);
             var optionalTranscriptGrade = student.getBestGrade(course);

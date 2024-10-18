@@ -1,8 +1,5 @@
 package sde.virginia.edu.hw4;
 
-import java.util.List;
-import java.util.Optional;
-
 public class CatalogService {
     private Catalog catalog;
 
@@ -110,7 +107,7 @@ public class CatalogService {
      * @see Section#setEnrollmentStatus(EnrollmentStatus)
      * @see EnrollmentStatus
      */
-    public void closeAllSection() {
+    public void closeAllSections() {
         //TODO: implement and test
     }
 }

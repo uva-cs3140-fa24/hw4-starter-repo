@@ -2,10 +2,6 @@ package sde.virginia.edu.hw4;
 
 import java.util.*;
 
-/**
- * //TODO: Extract the enrollment logic from {@link Section} into this class
- */
-
 public class Enrollment {
     private int enrollmentCapacity;
     private int waitListCapacity;
