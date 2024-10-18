@@ -7,7 +7,7 @@ public class Section {
     public static final int MINIMUM_COURSE_REGISTRATION_NUMBER = 1;
 
     /** Maximum CRN - CRNs must be between 00001 and 99999 */
-    public static final int MAXIMIMUM_COURSE_REGISTRATION_NUMBER = 99999;
+    public static final int MAXIMUM_COURSE_REGISTRATION_NUMBER = 99999;
 
     /**Minumum Section number - Section numbers must be between 001 and 999 */
     public static final int MINIMUM_SECTION_NUMBER = 1;
@@ -83,12 +83,12 @@ public class Section {
             Lecturer lecturer,
             Enrollment enrollment
     ) {
-        if (courseRegistrationNumber < MINIMUM_COURSE_REGISTRATION_NUMBER || courseRegistrationNumber > MAXIMIMUM_COURSE_REGISTRATION_NUMBER) {
+        if (courseRegistrationNumber < MINIMUM_COURSE_REGISTRATION_NUMBER || courseRegistrationNumber > MAXIMUM_COURSE_REGISTRATION_NUMBER) {
             throw new IllegalArgumentException(
                 "Invalid CRN: %d - CRNs must be between %d and %d inclusive.".formatted(
                         courseRegistrationNumber,
                         MINIMUM_COURSE_REGISTRATION_NUMBER,
-                        MAXIMIMUM_COURSE_REGISTRATION_NUMBER
+                        MAXIMUM_COURSE_REGISTRATION_NUMBER
                 ));
         }
         if (sectionNumber < MINIMUM_SECTION_NUMBER || sectionNumber > MAXIMUM_SECTION_NUMBER) {
