@@ -14,33 +14,22 @@ class LecturerTest {
     }
     @Test
     void getId() {
-        assertEquals(1234, lecturer.getId());
+        assertEquals(1234, lecturer.id());
     }
 
     @Test
     void getComputingId() {
-        assertEquals("pm8fc", lecturer.getComputingId());
+        assertEquals("pm8fc", lecturer.computingId());
     }
 
     @Test
     void getFirstName() {
-        assertEquals("Paul", lecturer.getFirstName());
-    }
-
-    @Test
-    void setFirstName() {
-        lecturer.setFirstName("Will");
-        assertEquals("Will", lecturer.getFirstName());
+        assertEquals("Paul", lecturer.firstName());
     }
 
     @Test
     void getLastName() {
-        assertEquals("McBurney", lecturer.getLastName());
+        assertEquals("McBurney", lecturer.lastName());
     }
 
-    @Test
-    void setLastName() {
-        lecturer.setLastName("THE MOST HUMBLE MAN IN THE ENTIRE WORLD!");
-        assertEquals("THE MOST HUMBLE MAN IN THE ENTIRE WORLD!", lecturer.getLastName());
-    }
 }

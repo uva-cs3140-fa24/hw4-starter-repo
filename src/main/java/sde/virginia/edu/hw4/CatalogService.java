@@ -52,6 +52,8 @@ public class CatalogService {
      * Attempts to add a section to the course catalog, ensuring the section doesn't break any rules.
      * The rules are:<br>
      * <ol>
+     *     <li>A section can only be added to a catalog <b>if the semesters match!</b> If the section semester and
+     *     the catalog semester do not match, then return {@link AddSectionResult#FAILED_SEMESTER_MISMATCH}</li>
      *     <li>A section can only be added to the catalog once. No duplicate sections. If the section is already
      *     present, then return {@link AddSectionResult#FAILED_SECTION_ALREADY_EXISTS}</li>
      *     <li>CRNs in a given catalog must be unique. If the CRN is not unique, this returns
@@ -97,7 +99,7 @@ public class CatalogService {
      * @see Student#removeEnrolledSection(Section)
      * @see Student#removeWaitListedSection(Section)
      */
-    public void removeSection(Section section) {
+    public void remove(Section section) {
         //TODO: implement and test
     }
 

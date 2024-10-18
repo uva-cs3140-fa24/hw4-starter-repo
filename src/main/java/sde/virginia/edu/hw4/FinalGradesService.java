@@ -17,7 +17,7 @@ public class FinalGradesService {
      * @see Section#isStudentEnrolled(Student)
      * @see Student#addGrade(Section, Grade)
      */
-    public void storeFinalGrades(Section section, Map<Student, Grade> finalGrades) {
+    public void processFinalGrades(Section section, Map<Student, Grade> finalGrades) {
         //TODO: implement and test
     }
 }

@@ -20,16 +20,16 @@ public class RegistrationService {
         SUCCESS_WAIT_LISTED,
         /**
          * Unable to enroll student because the student is already either enrolled or wait listed in at least one
-         * section of this course in the same semester as the one they are trying to regiser for.
+         * section of this course in the same semester as the one they are trying to register for.
          */
         FAILED_ALREADY_IN_COURSE,
         /**
-         * Unable to enroll because the course is closed
+         * Unable to enroll because the section is closed
          */
         FAILED_ENROLLMENT_CLOSED,
 
         /**
-         * Unable to enroll because both the enrollment and wait list for the course are full
+         * Unable to enroll because both the enrollment and wait list for the section is full
          */
         FAILED_SECTION_FULL,
 
@@ -83,7 +83,7 @@ public class RegistrationService {
      * AND the {@link Section}'s enrollment is still {@link EnrollmentStatus#OPEN open}, then the first student
      * on the wait list should be removed from the wait list and added to the section's enrollment automatically. That
      * student's schedule should also be updated to reflect the change. However, if enrollment for the section is
-     * {@link EnrollmentStatus#CLOSED closed}, no students should be added to enrollment even if the course is under
+     * {@link EnrollmentStatus#CLOSED closed}, no students should be added to enrollment even if the section is under
      * enrollment capacity.
      *
      * @param student the {@link Student} attempting to drop from a section's enrollment or wait list
